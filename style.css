@@ -1,0 +1,34 @@
+* {
+    box-sizing: border-box;
+}
+
+/* Sayfadaki öğelere genel bir stil verildi */
+
+.shopping-list li { 
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background-color: gainsboro;
+}
+
+.shopping-list li .item-name {
+    flex: 1;
+    padding: 5px 10px;
+}
+
+
+.shopping-list li .delete-icon {
+    transform: scale(0);
+    transition: transform 200ms;
+    font-size: 30px !important;
+}
+
+/* Delete iconu hover olduğunda görülecek */
+.shopping-list li:hover .delete-icon {
+    transform: scale(1);
+}
+
+.shopping-list li[item-completed] .item-name  {
+    text-decoration: line-through;
+    color: #999;
+}
